@@ -1,0 +1,44 @@
+html, body {
+    background-color: #222131;
+}
+#logo {
+    width: 251px;
+    height: 250px;
+    display: block;
+    margin: 20px auto;
+    position: relative;
+    background-image: url('./face.png');
+    background-size: contain;
+    position: relative;
+    cursor: pointer;
+}
+
+#logo::after,
+#logo::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #1ae105;
+    display: block;
+    position: absolute;
+    left: 98px;
+    top: 108px;
+    filter: blur(3px);
+    transition: opacity .5s ease-out;
+    opacity: 0;
+}
+
+#logo:hover {
+    filter: contrast(1.2);
+}
+
+#logo::before {
+    background-color: red;
+    left:135px;
+}
+
+#logo:hover::after,
+#logo:hover::before {
+    opacity: 1;
+}
